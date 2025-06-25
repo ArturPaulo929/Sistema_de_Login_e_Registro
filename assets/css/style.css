@@ -1,0 +1,87 @@
+body{
+    background-color: #272727;
+}
+*{
+    font-family: Arial;
+    font-size: 14px;
+    padding: 2px;
+}
+h1{
+    font-size: 20px;
+}
+h2{
+    font-size: 16px;
+}
+a{
+    text-decoration: none;
+}
+
+
+
+/* Animação para Login (esquerda para direita) */
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animação para Cadastro (direita para esquerda) */
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Aplica a animação específica para cada formulário */
+.login-page form {
+  animation: slideInFromLeft 0.5s ease forwards;
+}
+
+.cadastro-page form {
+  animation: slideInFromRight 0.5s ease forwards;
+}
+
+.login-page img {
+  animation: slideInFromRight 0.5s ease forwards;
+}
+
+.cadastro-page img{
+  animation: slideInFromLeft 0.5s ease forwards;
+}
+
+/* Mantém as outras transições suaves */
+a {
+  transition: color 0.3s ease;
+}
+
+.btn {
+  transition: all 0.3s ease;
+}
+
+.form-control {
+  transition: all 0.3s ease;
+  border: 1px solid #ced4da;
+}
+
+.form-control:focus {
+  border-color: #86b7fe;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Animação de saída
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+} */
